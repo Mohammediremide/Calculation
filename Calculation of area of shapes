@@ -1,0 +1,35 @@
+import math
+
+def circle_area(radius):
+    return math.pi * radius**2
+
+def circle_circumference(radius):
+    return 2 * math.pi * radius
+
+def rectangle_area(length, width):
+    return length * width
+
+def rectangle_perimeter(length, width):
+    return 2 * (length + width)
+
+# Main function
+def main():
+    print("Geometric Calculator")
+    print("1. Circle")
+    print("2. Rectangle")
+    choice = int(input("Enter your choice (1/2): "))
+
+    if choice == 1:
+        radius = float(input("Enter the radius of the circle: "))
+        print("Area of the circle:", circle_area(radius))
+        print("Circumference of the circle:", circle_circumference(radius))
+    elif choice == 2:
+        length = float(input("Enter the length of the rectangle: "))
+        width = float(input("Enter the width of the rectangle: "))
+        print("Area of the rectangle:", rectangle_area(length, width))
+        print("Perimeter of the rectangle:", rectangle_perimeter(length, width))
+    else:
+        print("Invalid choice")
+
+if __name__ == "__main__":
+    main()
